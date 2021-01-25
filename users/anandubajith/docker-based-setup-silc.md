@@ -49,6 +49,8 @@ Start an instance of Container and map the local folder into `files` directory i
 
 ### Connecting to the container
 Connect to the container
+```
   docker start silc
   docker exec -it silc /bin/bash
+```
 The usage instructions for the XSM simulator can be found here.
