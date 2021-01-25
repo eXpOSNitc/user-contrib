@@ -43,6 +43,8 @@ Start an instance of Container and map the local folder into `files` directory i
   docker run -v $PWD:/xsm_expl/files -d --name silc -i silc:ubuntu20.04 
   # on windows
   docker run -v %cd%:/xsm_expl/files -d --name silc -i silc:ubuntu20.04
+  # on powershell
+  docker run -v get-location:/xsm_expl/files -d --name silc -i silc:ubuntu20.04
 ```
 
 ### Connecting to the container
