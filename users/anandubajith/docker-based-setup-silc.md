@@ -44,7 +44,7 @@ Start an instance of Container and map the local folder into `files` directory i
   # on windows
   docker run -v %cd%:/xsm_expl/files -d --name silc -i silc:ubuntu20.04
   # on powershell
-  docker run -v get-location:/xsm_expl/files -d --name silc -i silc:ubuntu20.04
+  docker run -v ${PWD}:/xsm_expl/files -d --name silc -i silc:ubuntu20.04
 ```
 
 ### Connecting to the container
@@ -53,4 +53,11 @@ Connect to the container
   docker start silc
   docker exec -it silc /bin/bash
 ```
+
+### Connecting to the container using VS Code
+- Install both `ms-vscode-remote.remote-wsl` and `ms-azuretools.vscode-docker` extensions
+- Go to the Docker Tab
+- Start the silc container
+- Right click on it and click `Attach Visual Studio Code`
+
 The usage instructions for the XSM simulator can be found here.
